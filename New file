@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>INTRODUCERE IN VALORI</h1>
+<FORM action="" method="post">
+Introdu nr separate prin spatiu
+<INPUT type="text" name="sir_nr" value="" maxlenght="100"><br>
+<INPUT type="submit" value="trimite">
+<br>
+</FORM>
+
+<?php 
+if(isset($_POST["sir_nr"]))
+{$sir=$_POST["sir_nr"];
+
+echo "SIR DE NUMERE:".$sir;
+
+$a=explode(" ",$sir);
+$n=count($a);
+$s=0;
+for($i=0;$i<$n;$i++)
+$s=$s+$a[$i];
+echo "suma numerelor=".$s;}
+?>
+</body>
+</html>
